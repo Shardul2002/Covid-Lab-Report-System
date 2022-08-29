@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" >  
+    <title>Patient List</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+     
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav" style="padding-left: 30px;">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/" style="padding-left: 30px;">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="padding-left: 50px;">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="padding-left: 50px;">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" style="padding-left: 50px;">Disabled</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <h2>Patients:</h2>
+    <table class="table table-striped-columns">
+        <thead style="text-align:center">
+            <th>Id</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Age</th>
+            <th>Gender</th>
+        </thead>
+        {% for patient in patients_list%}
+        <tr style="text-align: center;">
+            <td>{{patient.id}}</td>
+            <td>{{patient.FirstName}}</td>
+            <td>{{patient.LastName}}</td>
+            <td>{{patient.Age}}</td>
+            <td>{{patient.Gender}}</td>
+            <td ><a href="/update/{{patient.id}}" style="text-decoration: none;">Update</a></td>
+            <td ><a href="/delete/{{patient.id}}" style="text-decoration: none;">Delete</a></td>
+            <td ><a href="/add/{{patient.id}}" style="text-decoration: none;">Add data</a></td>
+            <td><a href="/report/{{patient.id}}" style="text-decoration: none;">Report</a></td>
+            
+        </tr>
+        {%endfor%}
+    </table>
+   
+   
+    <script src="{% static 'js/bootstrap.min.js' %}"></script> 
+</body>
+</html>

@@ -1,0 +1,42 @@
+
+
+.add{
+    
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 30%;
+}
+
+.display{
+    position: absolute;
+    top: 30%;
+    left: 70%;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 30%;
+    
+    text-decoration: none;
+}
+
+a:link{
+    text-decoration: none;
+   
+}
+
+
+body{
+    background-image: url('../images/26807.jpg');
+    background-size:cover;
+}
+
+.quote{
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

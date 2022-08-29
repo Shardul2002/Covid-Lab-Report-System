@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Info</title>
+</head>
+<body>
+    <h2>Patient Info</h2>
+    First Name:{{patient.FirstName}}
+    Last Name:{{patient.LastName}}
+    Age:{{patient.Age}}
+    Gender:{{patient.Gender}}
+
+    <h2>Patient Clinical Data</h2>
+    <form method="post">
+        <table>
+            {{form.as_table}}
+        </table>
+        {%csrf_token%}
+        <input type="submit" value="Save">
+    </form>
+</body>
+</html>

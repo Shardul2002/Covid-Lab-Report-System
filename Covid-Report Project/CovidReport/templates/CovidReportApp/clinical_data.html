@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+{% load bootstrap3 %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/ bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81i uXoPkFOJwJ8ERdknLPMO">
+    <link rel="stylesheet" href="{% static 'CovidReport/static/css/bootstrap.min.css' %}" >  
+   
+    <title>Report</title>
+</head>
+<body>
+    <div class="container">
+    <h2>Patient Details</h2>
+    First Name: {{patient.FirstName}}
+    Last Name:{{patient.LastName}}
+    Age:{{patient.Age}}
+    Gender: {{patient.gender}}
+    <h2>Patient Data</h2>
+    <form method="post">
+        <table class="table table-striped">
+            {{form.as_table}}
+        </table>
+        {%csrf_token%}
+        <input type="submit" value="Save">
+    </form>
+    </div>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>  
+   
+</body>
+</html>

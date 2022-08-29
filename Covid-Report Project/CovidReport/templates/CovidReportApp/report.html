@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" > 
+    <title>Patient Report</title>
+</head>
+<body>
+    <h2 style="padding-left: 30px;"> Patient Report:</h2>
+    <hr />
+    <div class="card" style="width: 18rem;margin-left: 40%;">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Name:{{info.FirstName}}</li>
+          <li class="list-group-item">Age:{{info.Age}}</li>
+          <li class="list-group-item">Gender:{{info.Gender}}</li>
+          <li class="list-group-item">Date/Time:{{patient.measuredDateTime}}</li>
+        </ul>
+      </div>
+      <br /><br /><br />
+      <table >
+      <ul class="list-group">
+        <li class="list-group-item fw-bolder">Title:</li> 
+      </ul>
+      <p style="padding-left: 20px;">This is a Covid-19 Report.</p>
+      <ul class="list-group">
+        <li class="list-group-item fw-bolder">Parameters:</li> 
+      </ul>
+      <p style="padding-left: 20px;">Oxygen Level: {{patient.OxygenLevel}}</p>
+      <p style="padding-left: 20px;">Blood Pressure: {{patient.BloodPressure}}</p>
+      <p style="padding-left: 20px;">Swap-Type: {{patient.Swaptype}}</p>
+      
+      <ul class="list-group">
+        <li class="list-group-item fw-bolder">Result:</li>
+          <p style="padding-left: 20px;" class="fw-bolder"> The Patient is Covid-{{patient.Status}} </p>
+      </ul>
+      
+    </table>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>  
+</body>
+</html>
