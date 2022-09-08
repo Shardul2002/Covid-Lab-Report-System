@@ -64,3 +64,6 @@ def analyze(request,**kwargs):
 
 def logout(request):
     return render(request,'CovidReportApp/logout.html')
+
+def aboutus(request):
+    return render(request,'CovidReportApp/aboutus.html')

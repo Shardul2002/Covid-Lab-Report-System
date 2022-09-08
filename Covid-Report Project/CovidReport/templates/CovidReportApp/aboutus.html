@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" >  
+    <title>Cov-Labs</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid" style="padding:0px">
+        <div class="container-fluid">
+         
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <a class="navbar-brand" href="#">
+                <img src="{% static 'images\logo.jpg' %}" alt="" width="70" height="40" style="padding-left: 20px;">
+              </a>
+              <li >
+                <h2 style="padding-left: 100px;">Covid-19 Report Lab</h2>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/" style="padding-left: 700px;">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/aboutus" style="padding-left: 50px;">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href='/accounts/logout' style="padding-left: 50px;">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </nav>
+      <img class="rounded float-end" src="{% static 'images\NABL.png' %}" alt="Logo" style="padding-top: 50px;">
+    <p class="text-center fs-2" style="padding-top: 20px;">About US </p>
+    <p class="fs-4 text-start">The All About Laboratory is a group of qualified and competent medical and non-medical professionals, whose constant endeavour is to provide a wide range of diagnostic services, which are reliable, time-efficient, cost- effective, patient-friendly and easily accessible around the clock. We aim to achieve this through superior testing technology, robust quality control measures and a diligent work force.</p>
+    
+    <p class="text-center fs-2">Our Team</p>
+    <p class="text-start fs-4">We are a team of Pathologists, Microbiologists, Specialists with Doctorates, Laboratory Technologists and Phlebotomists. All of us function in synchrony, and with diligence, to run our different departments, which include Molecular diagnostics, Hematology, Biochemistry, Microbiology, Clinical Pathology, Cytopathology and Immunology.</p>
+    
+
+
+
+    <script src="{% static 'js/bootstrap.min.js' %}"></script> 
+</body>
+</html>

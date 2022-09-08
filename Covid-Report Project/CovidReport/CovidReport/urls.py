@@ -28,5 +28,6 @@ urlpatterns = [
     path('display/',views.PatientView.as_view(),name='display'),
     path('report/<int:pk>/',views.analyze),
     path('accounts/',include('django.contrib.auth.urls')),
-    path('logout/',views.logout)
+    path('logout/',views.logout),
+    path('aboutus/',views.aboutus)
 ]

@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" >  
     <title>Patient List</title>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid" style="padding:0px">
     <div class="container-fluid">
      
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,7 +20,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <a class="navbar-brand" href="#">
-            <img src="static\images\logo.jpeg" alt="" width="70" height="40" style="padding-left: 20px;">
+            <img src="{% static 'images\logo.jpg' %}" alt="" width="70" height="40" style="padding-left: 20px;">
           </a>
           <li >
             <h2 style="padding-left: 100px;">Covid-19 Report Lab</h2>
@@ -27,7 +29,7 @@
             <a class="nav-link" href="/" style="padding-left: 700px;">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" style="padding-left: 50px;">About Us</a>
+            <a class="nav-link" href="/aboutus" style="padding-left: 50px;">About Us</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href='/accounts/logout' style="padding-left: 50px;">Logout</a>
@@ -35,9 +37,10 @@
         </ul>
       </div>
     </div>
+  </div>
   </nav>
-    <h2>Patients:</h2>
-    <table class="table table-striped-columns">
+    <h2 style="padding-top: 20px; padding-bottom: 20px;">Patients:</h2>
+    <table class="table table-striped-columns" >
         <thead style="text-align:center">
             <th>Id</th>
             <th>FirstName</th>
